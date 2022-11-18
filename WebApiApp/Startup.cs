@@ -60,6 +60,14 @@ namespace WebApiApp
 			app.UseRouting();
 
 			app.UseAuthorization();
+			app.UseCors();
+			app.UseCors(builder =>
+			{
+				builder
+				.AllowAnyOrigin()
+				.AllowAnyMethod()
+				.AllowAnyHeader();
+			});
 
 			app.UseEndpoints(endpoints =>
 			{
