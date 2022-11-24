@@ -5,9 +5,11 @@ D:\Sukh Ram\WebApiApp\WebApiApp\bin\Debug\net6.0\WebApiApp.deps.json
 D:\Sukh Ram\WebApiApp\WebApiApp\bin\Debug\net6.0\WebApiApp.runtimeconfig.json
 D:\Sukh Ram\WebApiApp\WebApiApp\bin\Debug\net6.0\WebApiApp.dll
 D:\Sukh Ram\WebApiApp\WebApiApp\bin\Debug\net6.0\WebApiApp.pdb
+D:\Sukh Ram\WebApiApp\WebApiApp\bin\Debug\net6.0\Humanizer.dll
 D:\Sukh Ram\WebApiApp\WebApiApp\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 D:\Sukh Ram\WebApiApp\WebApiApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 D:\Sukh Ram\WebApiApp\WebApiApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Sukh Ram\WebApiApp\WebApiApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 D:\Sukh Ram\WebApiApp\WebApiApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 D:\Sukh Ram\WebApiApp\WebApiApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\Sukh Ram\WebApiApp\WebApiApp\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
