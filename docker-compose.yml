@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  webapiapp:
+    image: ${DOCKER_REGISTRY-}webapiapp
+    build:
+      context: .
+      dockerfile: WebApiApp\Dockerfile

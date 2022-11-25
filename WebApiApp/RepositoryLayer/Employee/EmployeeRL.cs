@@ -19,9 +19,11 @@ namespace WebApiApp.RepositoryLayer.Employee
 		}
 		public async Task<CreateRecordResponse> CreateEmployee(CreateRecordRequest request)
 		{
-			CreateRecordResponse response = new CreateRecordResponse();
-			response.IsSuccess = true;
-			response.Message = "Data Saved Successfully";
+			CreateRecordResponse response = new()
+			{
+				IsSuccess = true,
+				Message = "Data Saved Successfully"
+			};			
 			var empData = new TblEmpData()
 			{
 				EmpName = request.EmpName,
@@ -42,13 +44,15 @@ namespace WebApiApp.RepositoryLayer.Employee
 
 		public async Task<GetRecordResponse> GetEmployeeRecord()
 		{
-			GetRecordResponse response = new GetRecordResponse();
-			response.IsSuccess = true;
-			response.Message = "Got the saved records";
-			response.EmployeeData = new List<GetEmployeeData>();
+			GetRecordResponse response = new()
+			{
+				IsSuccess = true,
+				Message = "Got the saved records",
+				EmployeeData = new List<GetEmployeeData>()
+			};
 			try
 			{
-				var empList = _context.TblEmpData
+				var empList =  _context.TblEmpData
 				.Select(col => new GetEmployeeData
 				{
 					Id = col.Id,
@@ -62,13 +66,15 @@ namespace WebApiApp.RepositoryLayer.Employee
 				response.IsSuccess = false;
 				response.Message = ex.Message + "Data Not Getting";
 			}
-			return response;
+			return  response;
 		}
 		public async Task<UpdateRecordResponse> UpdateEmployeeRecord(UpdateRecordRequest request)
 		{
-			UpdateRecordResponse response = new UpdateRecordResponse();
-			response.IsSuccess = true;
-			response.Message = "Update Data Successfully";
+			UpdateRecordResponse response = new()
+			{
+				IsSuccess = true,
+				Message = "Update Data Successfully"
+			};
 			try
 			{
 				var query = _context.TblEmpData.FirstOrDefault(item => item.Id == request.Id);
@@ -88,10 +94,11 @@ namespace WebApiApp.RepositoryLayer.Employee
 		}
 		public async Task<DeleteRecordResponse> DeleteEmployeeRecord(DeleteRecordRequest request)
 		{
-			DeleteRecordResponse response = new DeleteRecordResponse();
-			response.IsSuccess = true;
-			response.Message = "Data Delete Successfully";
-
+			DeleteRecordResponse response = new()
+			{
+				IsSuccess = true,
+				Message = "Data Delete Successfully"
+			};		
 			try
 			{
 				var query = _context.TblEmpData.FirstOrDefault(item => item.Id == request.Id);
@@ -106,7 +113,6 @@ namespace WebApiApp.RepositoryLayer.Employee
 				response.IsSuccess=false;
 				response.Message = ex.Message + "Data Not Deleted";
 			}
-
 			return response;
 		}
 	}
